@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-3">
         {/* Brand */}
         <div className="space-y-4">
-          <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/ajtt-logo.png"
               alt="AJTT Accountants logo"
@@ -17,7 +17,7 @@ export default function Footer() {
             <span className="font-brand text-[15px] font-semibold uppercase tracking-wider text-[#efa555]">
               AJT&T Accountants
             </span>
-          </div>
+          </Link>
           <p className="text-sm text-neutral-400 max-w-xs">
             Professional accounting, tax and business advisory services across
             the UK.
