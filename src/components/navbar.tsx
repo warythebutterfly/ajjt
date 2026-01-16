@@ -1,44 +1,43 @@
-"use client";
-
-const links = [
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#testimonials", label: "Reviews" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
-];
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <a href="#" className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-xl bg-slate-900" />
-          <div className="leading-tight">
-            <div className="text-sm font-semibold">Ajtt</div>
-            <div className="text-xs text-slate-500">Accounting & Tax</div>
-          </div>
-        </a>
+    <header className="w-full border-b border-neutral-800 bg-[#0f172b]">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/ajtt-logo.png"
+            alt="AJTT Accountants logo"
+            width={42}
+            height={42}
+            priority
+          />
+          <span className="font-brand text-[15px] font-semibold uppercase tracking-wider text-[#efa555]">
+            AJT&T Accountants
+          </span>
+        </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm text-slate-600 hover:text-slate-900"
-            >
-              {l.label}
-            </a>
-          ))}
-        </nav>
-
-        <a
-          href="#contact"
-          className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:opacity-90"
-        >
-          Book a consultation
-        </a>
-      </div>
+        {/* Nav links */}
+        <div className="hidden md:flex items-center gap-8 text-sm text-neutral-300">
+          <Link href="#services" className="hover:text-[#efa555]">
+            Services
+          </Link>
+          <Link href="#about" className="hover:text-[#efa555]">
+            About
+          </Link>
+          <Link href="#testimonials" className="hover:text-[#efa555]">
+            Reviews
+          </Link>
+          <Link href="#faq" className="hover:text-[#efa555]">
+            FAQ
+          </Link>
+          <Link href="#contact" className="hover:text-[#efa555]">
+            Contact
+          </Link>
+        </div>
+      </nav>
     </header>
   );
 }

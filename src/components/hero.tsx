@@ -10,7 +10,7 @@ export default function Hero() {
   
             <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
               Clear books. Confident taxes.{" "}
-              <span className="text-slate-500">Year-round support.</span>
+              <span className="text-[#efa555]">Year-round support.</span>
             </h1>
   
             <p className="mt-4 text-slate-600 md:text-lg">
@@ -21,7 +21,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#contact"
-                className="rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:opacity-90"
+                className="rounded-xl bg-[#0f172b] px-5 py-3 text-sm font-medium text-white hover:opacity-90"
               >
                 Request a call back
               </a>
@@ -41,7 +41,7 @@ export default function Hero() {
           </div>
   
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <div className="rounded-2xl bg-slate-900 p-6 text-white">
+            <div className="rounded-2xl bg-[#0f172b] p-6 text-white">
               <div className="text-sm opacity-80">Free initial guidance</div>
               <div className="mt-2 text-2xl font-semibold">
                 Tell us what you need — we’ll reply within 24 hours.

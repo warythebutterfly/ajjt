@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind utilities;
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -27,5 +30,15 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Brand font (business card / logo) */
+.font-brand {
+  font-family: var(--font-brand), serif;
+}
+
+/* Body font */
+.font-body {
+  font-family: var(--font-body), system-ui, sans-serif;
 }
 

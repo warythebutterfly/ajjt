@@ -4,17 +4,20 @@ import { useMemo, useState } from "react";
 
 const services = [
   "Tax Returns",
-  "Bookkeeping & VAT",
+  "Self Assesment",
+  "Director's Tax Return",
+  "Confirmation Statement Filing",
   "Payroll",
   "Year-End Accounts",
+  "Bookkeeping & VAT",
   "Business Advisory",
   "New Business Setup",
 ];
 
 export default function Contact() {
-  const [status, setStatus] = useState<
-    "idle" | "sending" | "sent" | "error"
-  >("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle"
+  );
   const [error, setError] = useState<string>("");
 
   const canSubmit = useMemo(() => status !== "sending", [status]);
@@ -57,9 +60,10 @@ export default function Contact() {
           </p>
 
           <div className="mt-8 space-y-3 text-sm text-slate-700">
-            <Info label="Phone" value="+44 0000 000000" />
-            <Info label="Email" value="accountingfirm@example.com" />
-            <Info label="Office" value="Your Address, City, Postcode" />
+            <Info label="Name" value="Eddie Oyediran" />
+            <Info label="Phone" value="+44 7786 919490" />
+            <Info label="Email" value="eddie.ajtt@gmail.com" />
+            <Info label="Office" value="24 Vaughan Drive, Sittingbourne, ME102UA" />
           </div>
 
           <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-600">
@@ -142,7 +146,7 @@ export default function Contact() {
 
             <button
               disabled={!canSubmit}
-              className="w-full rounded-xl bg-slate-900 py-3 text-sm font-medium text-white hover:opacity-90 disabled:opacity-60"
+              className="w-full rounded-xl bg-[#0f172b] py-3 text-sm font-medium text-white hover:opacity-90 disabled:opacity-60"
             >
               {status === "sending" ? "Sending..." : "Send message"}
             </button>
@@ -169,7 +173,13 @@ export default function Contact() {
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <label className="block">
       <div className="mb-1 text-xs font-medium text-slate-700">{label}</div>

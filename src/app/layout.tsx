@@ -2,6 +2,19 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Playfair_Display, Inter } from "next/font/google";
+
+export const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-playfair",
+});
+
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -15,11 +28,11 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
-    default: "AJTT Accountants | Trusted Accountants in the UK",
-    template: "%s | AJTT Accountants",
+    default: "AJT&T Accountants | Trusted Accountants in the UK",
+    template: "%s | AJT&T Accountants",
   },
   description:
-    "AJTT Accountants provide professional accounting, bookkeeping, tax returns, VAT, payroll and business advisory services across the UK.",
+    "AJT&T Accountants provide professional accounting, bookkeeping, tax returns, VAT, payroll and business advisory services across the UK.",
   keywords: [
     "accountants in UK",
     "tax accountant",
@@ -29,11 +42,11 @@ export const metadata: Metadata = {
     "business accounting UK",
   ],
   openGraph: {
-    title: "AJTT Accountants",
+    title: "AJT&T Accountants",
     description:
       "Professional accounting and tax services for individuals and businesses in the UK.",
     url: "https://ajttaccountants.co.uk",
-    siteName: "AJTT Accountants",
+    siteName: "AJT&T Accountants",
     type: "website",
   },
   metadataBase: new URL("https://ajttaccountants.co.uk"),
@@ -45,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
         <Script
           id="accounting-structured-data"
@@ -55,7 +68,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AccountingService",
-              name: "AJTT Accountants",
+              name: "AJT&T Accountants",
               url: "https://ajttaccountants.co.uk",
               areaServed: "GB",
               serviceType: [
