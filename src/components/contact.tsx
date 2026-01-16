@@ -63,7 +63,6 @@ export default function Contact() {
             <Info label="Name" value="Eddie Oyediran" />
             <Info label="Phone" value="+44 7786 919490" />
             <Info label="Email" value="eddie.ajtt@gmail.com" />
-            <Info label="Office" value="24 Vaughan Drive, Sittingbourne, ME102UA" />
           </div>
 
           <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-600">
