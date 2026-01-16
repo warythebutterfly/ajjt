@@ -15,7 +15,7 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-2">
           <div className="h-9 w-9 rounded-xl bg-slate-900" />
           <div className="leading-tight">
-            <div className="text-sm font-semibold">Ajjt</div>
+            <div className="text-sm font-semibold">Ajtt</div>
             <div className="text-xs text-slate-500">Accounting & Tax</div>
           </div>
         </a>

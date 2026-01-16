@@ -4,7 +4,7 @@ export default function Footer() {
         <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-slate-600">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
             <div>
-              <span className="font-semibold text-slate-900">Ajjt</span>{" "}
+              <span className="font-semibold text-slate-900">Ajtt</span>{" "}
               • Accounting & Tax
             </div>
             <div className="text-xs">

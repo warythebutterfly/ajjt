@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Ajjt | Accounting & Tax",
+  title: "Ajtt | Accounting & Tax",
   description:
     "Professional accounting, bookkeeping, VAT, payroll, and tax services for individuals and businesses.",
 };
